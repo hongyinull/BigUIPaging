@@ -79,7 +79,7 @@ struct CardDeckPageView: View {
     }
     
     var dragGesture: some Gesture {
-        DragGesture(minimumDistance: 5)
+        DragGesture(minimumDistance: 10)
             .onChanged { value in
                 self.dragProgress = -(value.translation.width / containerSize.width)
             }
